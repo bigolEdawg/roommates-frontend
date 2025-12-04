@@ -1,0 +1,6 @@
+# Firebase/Google Services
+GoogleService-Info.plist
+GoogleService-Info-Debug.plist
+GoogleService-Info-Release.plist
+*.p12
+*.cer
