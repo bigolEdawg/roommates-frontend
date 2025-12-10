@@ -6,10 +6,16 @@ import FirebaseAuth
 class AuthenticationViewModel: ObservableObject {
     @Published var email: String = ""
     @Published var password: String = ""
+    
+    // add name field
+    @Published var name: String = ""
+    
     @Published var user: User?
     @Published var errorMessage: String = ""
     @Published var displayName: String = ""
-    
+//    struct LoginView: View {
+//        @StateObject private var authVM = AuthenticationViewModel()
+    private var createUser = CreateUser()
     private var authStateHandler: AuthStateDidChangeListenerHandle?
     
     init() {
@@ -38,10 +44,11 @@ extension AuthenticationViewModel {
     func signInWithEmailPassword() async -> Bool {
         do {
             let authResult = try await Auth.auth().signIn(withEmail: email, password: password)
-            //DispatchQueue.main.async {
-                self.user = authResult.user
-                self.errorMessage = ""  // Clear any previous errors
-            //}
+ 
+            self.user = authResult.user
+            self.errorMessage = ""  // Clear any previous errors
+
+            
             print("User \(authResult.user.uid) signed in!")
             return true
         } catch {
@@ -60,7 +67,10 @@ extension AuthenticationViewModel {
                 self.user = authResult.user
                 self.errorMessage = ""  // Clear any previous errors
             //}
+            
             print("User \(authResult.user.uid) signed up!")
+            print("Trying the create user function")
+            try await createUser.saveToFirestore(uid: authResult.user.uid, name: name)
             return true
         } catch {
             print(error)

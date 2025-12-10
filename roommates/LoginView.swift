@@ -37,6 +37,15 @@ struct LoginView: View {
                 .autocorrectionDisabled()
                 .keyboardType(.emailAddress)
             
+            // if sign up mode is sign up, display the name field
+            if isSignUpMode {
+                TextField("Name", text: $authVM.name)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .textInputAutocapitalization(.never)
+                    .autocorrectionDisabled()
+                    .keyboardType(.default)
+            }
+            
             SecureField("Password", text: $authVM.password)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             

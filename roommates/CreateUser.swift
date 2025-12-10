@@ -21,6 +21,7 @@ class CreateUser: ObservableObject {
             try await db.collection("users").document(uid).setData([
                 "name" : name
             ])
+            print("saved \(name) with \(uid) to users collection")
         } catch {
             print("error saving the \(name) to firestore error")
         }
