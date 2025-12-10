@@ -8,12 +8,15 @@
 import SwiftUI
 import FirebaseCore
 import FirebaseAuth
+import FirebaseFirestore
 
 class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
     FirebaseApp.configure()
-    Auth.auth().useEmulator(withHost: "localhost", port: 9999)
+    let db = Firestore.firestore()
+    
+    Auth.auth().useEmulator(withHost: "localhost", port: 9099)
     print("Firebase Configured!")
     return true
   }

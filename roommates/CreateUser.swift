@@ -16,13 +16,13 @@ class CreateUser: ObservableObject {
     let db = Firestore.firestore()
     
     // save the unique id to firestore
-    func saveToFirestore(uid: String) async throws{
+    func saveToFirestore(uid: String, name: String) async throws{
         do {
             try await db.collection("users").document(uid).setData([
-                "name" : "test"
+                "name" : name
             ])
         } catch {
-            print(error)
+            print("error saving the \(name) to firestore error")
         }
     }
     

@@ -10,6 +10,7 @@
 		B106656A2E98908A000BDABF /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B10665692E98908A000BDABF /* FirebaseAnalytics */; };
 		B106656C2E98908A000BDABF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B106656B2E98908A000BDABF /* FirebaseAuth */; };
 		B106656E2E98908A000BDABF /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = B106656D2E98908A000BDABF /* FirebaseCore */; };
+		B151B4022EE7BF1C00914A90 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B151B4012EE7BF1C00914A90 /* FirebaseFirestore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B106656A2E98908A000BDABF /* FirebaseAnalytics in Frameworks */,
+				B151B4022EE7BF1C00914A90 /* FirebaseFirestore in Frameworks */,
 				B106656E2E98908A000BDABF /* FirebaseCore in Frameworks */,
 				B106656C2E98908A000BDABF /* FirebaseAuth in Frameworks */,
 			);
@@ -132,6 +134,7 @@
 				B10665692E98908A000BDABF /* FirebaseAnalytics */,
 				B106656B2E98908A000BDABF /* FirebaseAuth */,
 				B106656D2E98908A000BDABF /* FirebaseCore */,
+				B151B4012EE7BF1C00914A90 /* FirebaseFirestore */,
 			);
 			productName = roommates;
 			productReference = B1F59C042E87449C00576593 /* roommates.app */;
@@ -610,6 +613,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B10665672E988688000BDABF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCore;
+		};
+		B151B4012EE7BF1C00914A90 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B10665672E988688000BDABF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

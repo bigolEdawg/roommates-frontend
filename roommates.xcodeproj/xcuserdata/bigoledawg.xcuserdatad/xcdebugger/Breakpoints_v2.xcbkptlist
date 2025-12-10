@@ -23,15 +23,77 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3E8DC34F-62B1-42E0-9FC0-195A46828CA3"
+            uuid = "BD767797-CA93-41A4-BD67-C0EFA24ED90F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "roommates/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "BD767797-CA93-41A4-BD67-C0EFA24ED90F - 9df10ee2023250a8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "roommates.CardView.body.getter : some"
+                  moduleName = "roommates.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bigoledawg/roommates-frontend/roommates/roommates/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28">
+               </Location>
+               <Location
+                  uuid = "BD767797-CA93-41A4-BD67-C0EFA24ED90F - 554816a8ad3c6af7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI.TupleView&lt;(SwiftUI._ShapeView&lt;SwiftUI.RoundedRectangle, SwiftUI.Color&gt;, SwiftUI.StrokeBorderShapeView&lt;SwiftUI.RoundedRectangle, SwiftUI.ForegroundStyle, SwiftUI.EmptyView&gt;, SwiftUI.Text)&gt;, SwiftUI._ShapeView&lt;SwiftUI.RoundedRectangle, SwiftUI.Color&gt;&gt; in roommates.CardView.body.getter : some"
+                  moduleName = "roommates.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bigoledawg/roommates-frontend/roommates/roommates/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4383287F-B2DA-4F19-87F3-537BAF361FFA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "roommates/CreateUser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F6EE9CC0-B960-42FE-B392-C15A6E05F4C5"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "roommates/Auth/AuthenticationViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "signInWithEmailPassword()"
             landmarkType = "7">
          </BreakpointContent>
@@ -39,32 +101,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F1EECCDC-39BC-4280-8B9D-0C35E9ECE93F"
+            uuid = "F3C38B8B-0945-44CE-8179-12AC0AD0C642"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "roommates/Auth/AuthenticationViewModel.swift"
+            filePath = "roommates/roommatesApp.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "signInWithEmailPassword()"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B15B916E-E603-4C93-BC0D-96ECFF76B81E"
+            uuid = "CA9B4D08-8D5B-4DD3-A4F9-8E997A61259E"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "roommates/Auth/AuthenticationViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "signInWithEmailPassword()"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "registerAuthStateHandler()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
