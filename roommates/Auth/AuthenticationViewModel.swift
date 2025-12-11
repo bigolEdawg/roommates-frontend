@@ -9,6 +9,7 @@ class AuthenticationViewModel: ObservableObject {
     
     // add name field
     @Published var name: String = ""
+    @Published var dob: String = ""
     
     @Published var user: User?
     @Published var errorMessage: String = ""

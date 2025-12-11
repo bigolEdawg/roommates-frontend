@@ -44,6 +44,12 @@ struct LoginView: View {
                     .textInputAutocapitalization(.never)
                     .autocorrectionDisabled()
                     .keyboardType(.default)
+                
+                TextField("DOB", text: $authVM.dob)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .textInputAutocapitalization(.never)
+                    .autocorrectionDisabled()
+                    .keyboardType(.default)
             }
             
             SecureField("Password", text: $authVM.password)
