@@ -34,6 +34,36 @@
             endingLineNumber = "28"
             landmarkName = "body"
             landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "BD767797-CA93-41A4-BD67-C0EFA24ED90F - 9df10ee2023250a8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "roommates.CardView.body.getter : some"
+                  moduleName = "roommates.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bigoledawg/roommates-frontend/roommates/roommates/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28">
+               </Location>
+               <Location
+                  uuid = "BD767797-CA93-41A4-BD67-C0EFA24ED90F - 554816a8ad3c6af7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI.TupleView&lt;(SwiftUI._ShapeView&lt;SwiftUI.RoundedRectangle, SwiftUI.Color&gt;, SwiftUI.StrokeBorderShapeView&lt;SwiftUI.RoundedRectangle, SwiftUI.ForegroundStyle, SwiftUI.EmptyView&gt;, SwiftUI.Text)&gt;, SwiftUI._ShapeView&lt;SwiftUI.RoundedRectangle, SwiftUI.Color&gt;&gt; in roommates.CardView.body.getter : some"
+                  moduleName = "roommates.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bigoledawg/roommates-frontend/roommates/roommates/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -62,8 +92,8 @@
             filePath = "roommates/Auth/AuthenticationViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "signInWithEmailPassword()"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,8 +124,8 @@
             filePath = "roommates/Auth/AuthenticationViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "registerAuthStateHandler()"
             landmarkType = "7">
          </BreakpointContent>
