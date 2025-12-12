@@ -1,15 +1,15 @@
 //
-//  LoginView.swift
+//  GroupView.swift
 //  roommates
 //
-//  Created by Elijah Matamoros on 12/3/25.
+//  Created by Elijah Matamoros on 12/11/25.
 //
 
 
 import SwiftUI
 //
 //struct ContentView: View {
-//    
+//
 //    var body: some View {
 //        VStack {
 //            TextField("email field")
@@ -20,40 +20,16 @@ import SwiftUI
 
 import SwiftUI
 
-struct LoginView: View {
+struct GroupView: View {
     @StateObject private var authVM = AuthenticationViewModel()
     @State private var isLoading = false
     @State private var isSignUpMode = false  // Toggle between sign up/sign in
     
     var body: some View {
         VStack(spacing: 20) {
-            Text(isSignUpMode ? "Sign Up" : "Sign In")
+            Text("Groups")
                 .font(.largeTitle)
                 .bold()
-            
-            TextField("Email", text: $authVM.email)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .textInputAutocapitalization(.never)
-                .autocorrectionDisabled()
-                .keyboardType(.emailAddress)
-            
-            // if sign up mode is sign up, display the name field
-            if isSignUpMode {
-                TextField("Name", text: $authVM.name)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .textInputAutocapitalization(.never)
-                    .autocorrectionDisabled()
-                    .keyboardType(.default)
-                
-                TextField("DOB", text: $authVM.dob)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .textInputAutocapitalization(.never)
-                    .autocorrectionDisabled()
-                    .keyboardType(.default)
-            }
-            
-            SecureField("Password", text: $authVM.password)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
             
             if !authVM.errorMessage.isEmpty {
                 Text(authVM.errorMessage)

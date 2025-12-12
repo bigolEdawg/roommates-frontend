@@ -35,7 +35,7 @@ class UserData {
             
             // decode the json. Remember that we can't just return data because at this point data is a JSON
             let chores = try decoder.decode([Chore].self, from: data)
-            print("SUCCESS!")
+            print("SUCCESS!\n")
             print("\(chores)")
             return chores
         } catch {
