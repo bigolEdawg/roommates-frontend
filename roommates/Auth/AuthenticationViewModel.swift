@@ -17,7 +17,7 @@ class AuthenticationViewModel: ObservableObject {
 //    struct LoginView: View {
 //        @StateObject private var authVM = AuthenticationViewModel()
     private var createUser = CreateUser()
-    private var getChore = UserData()
+//    private var getChore = UserData()
     private var authStateHandler: AuthStateDidChangeListenerHandle?
     
     init() {
@@ -52,8 +52,8 @@ extension AuthenticationViewModel {
 
             
             print("User \(authResult.user.uid) signed in!")
-            print("Getting chores...")
-            let _ = await getChore.getChoreData(groupId : "9Mufv6K3WbZ5oPP3aLuD")
+//            print("Getting chores...")
+//            let _ = await getChore.getChoreData(groupId : "9Mufv6K3WbZ5oPP3aLuD")
             return true
         } catch {
             print(error)

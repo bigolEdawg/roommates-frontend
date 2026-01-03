@@ -12,6 +12,7 @@
 		B106656E2E98908A000BDABF /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = B106656D2E98908A000BDABF /* FirebaseCore */; };
 		B151B4022EE7BF1C00914A90 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B151B4012EE7BF1C00914A90 /* FirebaseFirestore */; };
 		B15E6DF72EEE9B900076ABFB /* TokenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E6DF62EEE9B800076ABFB /* TokenService.swift */; };
+		B15E6E152EEFE1F20076ABFB /* BackendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E6E142EEFE1F20076ABFB /* BackendService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		B15E6DF62EEE9B800076ABFB /* TokenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenService.swift; sourceTree = "<group>"; };
+		B15E6E142EEFE1F20076ABFB /* BackendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendService.swift; sourceTree = "<group>"; };
 		B1F59C042E87449C00576593 /* roommates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = roommates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F59C112E8744A000576593 /* roommatesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = roommatesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F59C1B2E8744A000576593 /* roommatesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = roommatesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +103,7 @@
 				B10665682E98908A000BDABF /* Frameworks */,
 				B1F59C052E87449C00576593 /* Products */,
 				B15E6DF62EEE9B800076ABFB /* TokenService.swift */,
+				B15E6E142EEFE1F20076ABFB /* BackendService.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B15E6DF72EEE9B900076ABFB /* TokenService.swift in Sources */,
+				B15E6E152EEFE1F20076ABFB /* BackendService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
