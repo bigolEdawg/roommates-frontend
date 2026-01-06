@@ -7,7 +7,8 @@
 
 import SwiftUI
 struct ChoreView: View {
-    let userId: String
+    //let userId: String
+    let groupID: String
     @StateObject private var choreVM = ChoreViewModel()
  
     
@@ -57,7 +58,7 @@ struct ChoreView: View {
         .padding(.horizontal)
         .task {
             // ✅ Load via ViewModel
-            await choreVM.loadChores()
+            await choreVM.loadChores(group_id: groupID)
         }
     }
     

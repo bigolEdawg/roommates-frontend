@@ -3,7 +3,7 @@ import SwiftUI
 struct GroupView: View {
     let userId: String
     @StateObject private var groupVM = GroupViewModel()
- 
+    @StateObject private var choreVM = ChoreViewModel()
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -23,14 +23,29 @@ struct GroupView: View {
                     .padding()
             } else {
                 // ✅ Use ViewModel's groups (which are Identifiable)
+//                List(groupVM.groups) { group in
+//                    VStack(alignment: .leading) {
+//                        Text(group.name)
+//                            .font(.subheadline)
+//                            .bold()
+//                        Text("Created: \(formatDate(group.createdAt))")
+//                            .font(.caption)
+//                            .foregroundColor(.gray)
+//                    }
+//                }
+                // nav is for going to a new view
+                // button is for actions
                 List(groupVM.groups) { group in
-                    VStack(alignment: .leading) {
-                        Text(group.name)
-                            .font(.subheadline)
-                            .bold()
-                        Text("Created: \(formatDate(group.createdAt))")
-                            .font(.caption)
-                            .foregroundColor(.gray)
+                    NavigationLink(destination: ChoreView(groupID : group.id)) {
+                        VStack(alignment: .leading) {
+                            Text(group.name)
+                                .font(.subheadline)
+                                .bold()
+                            
+                            Text("Created: \(formatDate(group.createdAt))")
+                                .font(.caption)
+                                .foregroundColor(.gray)
+                        }
                     }
                 }
                 .frame(height: 200)
