@@ -7,66 +7,68 @@ struct GroupView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("Your Groups")
-                .font(.headline)
-                .bold()
-            
-            // ✅ Use ViewModel's properties
-            if groupVM.isLoading {
-                ProgressView()
-                    .frame(maxWidth: .infinity)
-            } else if groupVM.groups.isEmpty {
-                Text("No groups yet. Create one!")
-                    .foregroundColor(.gray)
-                    .font(.caption)
-                    .frame(maxWidth: .infinity, alignment: .center)
-                    .padding()
-            } else {
-                // ✅ Use ViewModel's groups (which are Identifiable)
-//                List(groupVM.groups) { group in
-//                    VStack(alignment: .leading) {
-//                        Text(group.name)
-//                            .font(.subheadline)
-//                            .bold()
-//                        Text("Created: \(formatDate(group.createdAt))")
-//                            .font(.caption)
-//                            .foregroundColor(.gray)
-//                    }
-//                }
-                // nav is for going to a new view
-                // button is for actions
-                List(groupVM.groups) { group in
-                    NavigationLink(destination: ChoreView(groupID : group.id)) {
-                        VStack(alignment: .leading) {
-                            Text(group.name)
-                                .font(.subheadline)
-                                .bold()
-                            
-                            Text("Created: \(formatDate(group.createdAt))")
-                                .font(.caption)
-                                .foregroundColor(.gray)
+            NavigationStack {
+                Text("Your Groups")
+                    .font(.headline)
+                    .bold()
+                
+                // ✅ Use ViewModel's properties
+                if groupVM.isLoading {
+                    ProgressView()
+                        .frame(maxWidth: .infinity)
+                } else if groupVM.groups.isEmpty {
+                    Text("No groups yet. Create one!")
+                        .foregroundColor(.gray)
+                        .font(.caption)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .padding()
+                } else {
+                    // ✅ Use ViewModel's groups (which are Identifiable)
+                    //                List(groupVM.groups) { group in
+                    //                    VStack(alignment: .leading) {
+                    //                        Text(group.name)
+                    //                            .font(.subheadline)
+                    //                            .bold()
+                    //                        Text("Created: \(formatDate(group.createdAt))")
+                    //                            .font(.caption)
+                    //                            .foregroundColor(.gray)
+                    //                    }
+                    //                }
+                    // nav is for going to a new view
+                    // button is for actions
+                    List(groupVM.groups) { group in
+                        NavigationLink(destination: ChoreView(groupID : group.id)) {
+                            VStack(alignment: .leading) {
+                                Text(group.name)
+                                    .font(.subheadline)
+                                    .bold()
+                                
+                                Text("Created: \(formatDate(group.createdAt))")
+                                    .font(.caption)
+                                    .foregroundColor(.gray)
+                            }
                         }
                     }
+                    .frame(height: 200)
                 }
-                .frame(height: 200)
-            }
-            
-            // Create new group button - use ViewModel
-            Button("Create New Group") {
-                Task {
-//                    _ = await groupVM.createGroup(name: "Test Group")
+                
+                // Create new group button - use ViewModel
+                Button("Create New Group") {
+                    Task {
+                        //                    _ = await groupVM.createGroup(name: "Test Group")
+                    }
                 }
+                .buttonStyle(.bordered)
+                .disabled(groupVM.isLoading)
             }
-            .buttonStyle(.bordered)
-            .disabled(groupVM.isLoading)
-        }
-        .padding()
-        .background(Color(.systemGray6))
-        .cornerRadius(10)
-        .padding(.horizontal)
-        .task {
-            // ✅ Load via ViewModel
-            await groupVM.loadGroups()
+            .padding()
+            .background(Color(.systemGray6))
+            .cornerRadius(10)
+            .padding(.horizontal)
+            .task {
+                // ✅ Load via ViewModel
+                await groupVM.loadGroups()
+            }
         }
     }
     

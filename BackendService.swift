@@ -54,6 +54,8 @@ class BackendService {
     }
     
     // Get user's chore
+    // TODO:
+    // want to make reload/try again if it fails
     // http://127.0.0.1:5000/api/group/chore?group-id=3
     func getChores(group_id : String) async throws -> [[String: Any]] {
         let data = try await authenticatedRequest("/group/chore?group-id=\(group_id)")
