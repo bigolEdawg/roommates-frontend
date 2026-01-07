@@ -10,6 +10,8 @@
 		B106656A2E98908A000BDABF /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B10665692E98908A000BDABF /* FirebaseAnalytics */; };
 		B106656C2E98908A000BDABF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B106656B2E98908A000BDABF /* FirebaseAuth */; };
 		B106656E2E98908A000BDABF /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = B106656D2E98908A000BDABF /* FirebaseCore */; };
+		B14D59542F0DC450003F42EF /* MemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14D59532F0DC418003F42EF /* MemberView.swift */; };
+		B14D59562F0DC55D003F42EF /* MemberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14D59552F0DC548003F42EF /* MemberViewModel.swift */; };
 		B151B4022EE7BF1C00914A90 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B151B4012EE7BF1C00914A90 /* FirebaseFirestore */; };
 		B15E6DF72EEE9B900076ABFB /* TokenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E6DF62EEE9B800076ABFB /* TokenService.swift */; };
 		B15E6E152EEFE1F20076ABFB /* BackendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E6E142EEFE1F20076ABFB /* BackendService.swift */; };
@@ -33,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B14D59532F0DC418003F42EF /* MemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberView.swift; sourceTree = "<group>"; };
+		B14D59552F0DC548003F42EF /* MemberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberViewModel.swift; sourceTree = "<group>"; };
 		B15E6DF62EEE9B800076ABFB /* TokenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenService.swift; sourceTree = "<group>"; };
 		B15E6E142EEFE1F20076ABFB /* BackendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendService.swift; sourceTree = "<group>"; };
 		B1F59C042E87449C00576593 /* roommates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = roommates.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +108,8 @@
 				B1F59C052E87449C00576593 /* Products */,
 				B15E6DF62EEE9B800076ABFB /* TokenService.swift */,
 				B15E6E142EEFE1F20076ABFB /* BackendService.swift */,
+				B14D59532F0DC418003F42EF /* MemberView.swift */,
+				B14D59552F0DC548003F42EF /* MemberViewModel.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -270,6 +276,8 @@
 			files = (
 				B15E6DF72EEE9B900076ABFB /* TokenService.swift in Sources */,
 				B15E6E152EEFE1F20076ABFB /* BackendService.swift in Sources */,
+				B14D59542F0DC450003F42EF /* MemberView.swift in Sources */,
+				B14D59562F0DC55D003F42EF /* MemberViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

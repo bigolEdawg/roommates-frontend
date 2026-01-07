@@ -1,56 +1,56 @@
 //
-//  ChoreView.swift
+//  Untitled.swift
 //  roommates
 //
-//  Created by Elijah Matamoros on 1/2/26.
+//  Created by Elijah Matamoros on 1/6/26.
 //
 
 import SwiftUI
-struct ChoreView: View {
+struct MemberView: View {
     //let userId: String
     let groupID: String
-    @StateObject private var choreVM = ChoreViewModel()
     @StateObject private var memberVM = MemberViewModel()
+ 
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("Group Chores")
+            Text("Your Members")
                 .font(.headline)
                 .bold()
             
             // ✅ Use ViewModel's properties
-            if choreVM.isLoading {
+            if memberVM.isLoading {
                 ProgressView()
                     .frame(maxWidth: .infinity)
-            } else if choreVM.chores.isEmpty {
-                Text("Add Chore")
+            } else if memberVM.members.isEmpty {
+                Text("No members")
                     .foregroundColor(.gray)
                     .font(.caption)
                     .frame(maxWidth: .infinity, alignment: .center)
                     .padding()
             } else {
-                // ✅ Use ViewModel's chores (which are Identifiable)
-                List(choreVM.chores) { chore in
+                // ✅ Use ViewModel's members (which are Identifiable)
+                List(memberVM.members) { member in
                     VStack(alignment: .leading) {
-                        Text(chore.name)
+                        Text(member.user_name)
                             .font(.subheadline)
                             .bold()
-                        Text("Created: \(formatDate(chore.createdAt))")
-                            .font(.caption)
-                            .foregroundColor(.gray)
+//                        Text("Created: \(formatDate(member.joined_at))")
+//                            .font(.caption)
+//                            .foregroundColor(.gray)
                     }
                 }
                 .frame(height: 200)
             }
             
-            // Create new chore button - use ViewModel
-            Button("Create New Chore") {
+            // Create new member button - use ViewModel
+            Button("Add Member") {
                 Task {
-//                    _ = await choreVM.createGroup(name: "Test Chore")
+//                    _ = await memberVM.createGroup(name: "Test Member")
                 }
             }
             .buttonStyle(.bordered)
-            .disabled(choreVM.isLoading)
+            .disabled(memberVM.isLoading)
         }
         .padding()
         .background(Color(.systemGray6))
@@ -58,7 +58,7 @@ struct ChoreView: View {
         .padding(.horizontal)
         .task {
             // ✅ Load via ViewModel
-            await choreVM.loadChores(group_id: groupID)
+            await memberVM.loadMembers(group_id: groupID)
         }
     }
     

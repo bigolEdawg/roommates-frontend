@@ -11,7 +11,7 @@ enum AppError: Error {
 class BackendService {
     // private let baseURL = "http://localhost:8080/api"
     private let baseURL = "http://127.0.0.1:5000/api"
-     
+    
     private func authenticatedRequest(_ endpoint: String) async throws -> Data {
         // Get token from Firebase
         guard let user = Auth.auth().currentUser,
@@ -59,8 +59,17 @@ class BackendService {
     // http://127.0.0.1:5000/api/group/chore?group-id=3
     func getChores(group_id : String) async throws -> [[String: Any]] {
         let data = try await authenticatedRequest("/group/chore?group-id=\(group_id)")
-        print("trying to get data from api...calling chore")
+        print("trying to get data from api...calling chores for \(group_id)")
         print(data)
         return try JSONSerialization.jsonObject(with: data) as? [[String: Any]] ?? []
     }
+    
+    // http://127.0.0.1:5000/api/group/chore?group-id=3
+    func getMembers(group_id : String) async throws -> [[String: Any]] {
+        let data = try await authenticatedRequest("/group/members?group-id=\(group_id)")
+        print("trying to get data from api...calling members for \(group_id)")
+        print(data)
+        return try JSONSerialization.jsonObject(with: data) as? [[String: Any]] ?? []
+    }
+    
 }
